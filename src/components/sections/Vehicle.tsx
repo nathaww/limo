@@ -1,12 +1,10 @@
 import { SectionDivider } from '../ui'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Pagination, EffectFade } from 'swiper/modules'
+import { Autoplay, Pagination } from 'swiper/modules'
 
 // Import Swiper styles
 import 'swiper/css'
-import 'swiper/css/autoplay'
 import 'swiper/css/pagination'
-import 'swiper/css/effect-fade'
 
 export function Vehicle() {
   return (
@@ -31,18 +29,13 @@ export function Vehicle() {
           <div className="relative group overflow-hidden">
             <div className="relative w-full h-auto md:h-96 lg:h-100 overflow-hidden rounded-lg">
               <Swiper
-                modules={[Autoplay, Pagination, EffectFade]}
+                modules={[Autoplay, Pagination]}
                 spaceBetween={0}
                 slidesPerView={1}
-                
                 loop={true}
                 autoplay={{
                   delay: 3000,
                   disableOnInteraction: false,
-                }}
-                effect="fade"
-                fadeEffect={{
-                  crossFade: true,
                 }}
                 className="w-full h-full"
               >
