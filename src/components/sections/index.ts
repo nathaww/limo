@@ -1,0 +1,7 @@
+export { Header } from './Header'
+export { Hero } from './Hero'
+export { Vehicle } from './Vehicle'
+export { Chauffeur } from './Chauffeur'
+export { Services } from './Services'
+export { Booking } from './Booking'
+export { Footer } from './Footer'
