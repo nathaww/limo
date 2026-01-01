@@ -1,4 +1,12 @@
 import { SectionDivider } from '../ui'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Pagination, EffectFade } from 'swiper/modules'
+
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/autoplay'
+import 'swiper/css/pagination'
+import 'swiper/css/effect-fade'
 
 export function Vehicle() {
   return (
@@ -21,39 +29,55 @@ export function Vehicle() {
             </p>
           </div>
           <div className="relative group overflow-hidden">
-            <div className="relative w-full h-80 md:h-96 lg:h-[400px] overflow-hidden rounded-lg">
-              {/* Image Slider Container */}
-              <div className="flex animate-slide-infinite">
-                {/* Duplicate images for seamless infinite loop */}
-                <img 
-                  fetchPriority="high" 
-                  src="/lincon.jpeg" 
-                  alt="Lincoln Aviator" 
-                  className="flex-shrink-0 w-full h-full object-cover" 
-                />
-                <img 
-                  fetchPriority="high" 
-                  src="/lincon.jpeg" 
-                  alt="Lincoln Aviator" 
-                  className="flex-shrink-0 w-full h-full object-cover" 
-                />
-                <img 
-                  fetchPriority="high" 
-                  src="/lincon.jpeg" 
-                  alt="Lincoln Aviator" 
-                  className="flex-shrink-0 w-full h-full object-cover" 
-                />
-              </div>
-              
+            <div className="relative w-full h-auto md:h-96 lg:h-100 overflow-hidden rounded-lg">
+              <Swiper
+                modules={[Autoplay, Pagination, EffectFade]}
+                spaceBetween={0}
+                slidesPerView={1}
+                
+                loop={true}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                }}
+                effect="fade"
+                fadeEffect={{
+                  crossFade: true,
+                }}
+                className="w-full h-full"
+              >
+                <SwiperSlide>
+                  <img
+                    src="/lincon.jpeg"
+                    alt="Lincoln Aviator - Exterior View"
+                    className="w-full h-full object-cover"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src="/lincon2.avif"
+                    alt="Lincoln Aviator - Interior View"
+                    className="w-full h-full object-cover"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src="/lincon3.avif"
+                    alt="Lincoln Aviator - Luxury Features"
+                    className="w-full h-full object-cover"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src="/lincon4.avif"
+                    alt="Lincoln Aviator - Luxury Features"
+                    className="w-full h-full object-cover"
+                  />
+                </SwiperSlide>
+              </Swiper>
+
               {/* Gradient overlay for hover effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#d4af6a]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-              
-              {/* Optional: Slider indicators */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-                <div className="w-2 h-2 bg-white/50 rounded-full"></div>
-                <div className="w-2 h-2 bg-white/30 rounded-full"></div>
-                <div className="w-2 h-2 bg-white/30 rounded-full"></div>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#d4af6a]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10"></div>
             </div>
           </div>
         </div>

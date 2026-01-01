@@ -46,21 +46,3 @@ body {
   font-weight: 500;
   letter-spacing: -0.02em;
 }
-
-/* Infinite Image Slider Animation */
-@keyframes slide-infinite {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-33.333%);
-  }
-}
-
-.animate-slide-infinite {
-  animation: slide-infinite 12s linear infinite;
-}
-
-.animate-slide-infinite:hover {
-  animation-play-state: paused;
-}
