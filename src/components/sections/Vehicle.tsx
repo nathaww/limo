@@ -2,7 +2,6 @@ import { SectionDivider } from '../ui'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
 
-// Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/pagination'
 
@@ -18,8 +17,7 @@ export function Vehicle() {
               The Vehicle
             </h2>
             <p className="text-[#c4c4b8] text-lg leading-relaxed mb-8 open-sans-light">
-              Every ride is in a meticulously maintained 2022 Lincoln Aviator. Spacious interiors,
-              refined comfort, and a smooth, quiet ride define the experience.
+            Every ride is delivered in meticulously maintained, top-tier vehicles—ensuring comfort, style, and reliability from start to finish.
             </p>
             <p className="text-[#8a8a7a] leading-relaxed open-sans-light">
               Climate control, premium leather seating, and ample legroom ensure you arrive
@@ -70,7 +68,7 @@ export function Vehicle() {
               </Swiper>
 
               {/* Gradient overlay for hover effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#d4af6a]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10"></div>
+              <div className="absolute inset-0 bg-linear-to-br from-[#d4af6a]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10"></div>
             </div>
           </div>
         </div>

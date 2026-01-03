@@ -13,7 +13,7 @@ export function Header() {
           <NavLink href="#services">Services</NavLink>
           <NavLink href="#book-now">Contact</NavLink>
         </div>
-        <Button href="#book-now" className="hidden md:inline-block !px-4 lg:px-8 !py-3 !text-xs">
+        <Button href="#book-now" className="hidden md:inline-block px-4 lg:px-8 py-3 text-xs">
           Book Now
         </Button>
       </nav>

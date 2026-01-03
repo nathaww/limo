@@ -7,8 +7,8 @@ export function Footer() {
             <p className="oleo-script-swash-caps-bold text-xl text-[#e8e8e0] mb-2 tracking-tight">
               Centennial Black Car Service
             </p>
-            <a 
-              href="mailto:Endale44@gmail.com" 
+            <a
+              href="mailto:Endale44@gmail.com"
               className="text-[#8a8a7a] text-sm hover:text-[#d4af6a] transition-colors duration-300 open-sans-light tracking-wide"
             >
               Endale44@gmail.com
